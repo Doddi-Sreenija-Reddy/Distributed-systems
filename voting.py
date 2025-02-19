@@ -39,5 +39,6 @@ if __name__ == "__main__":
     threads = [threading.Thread(target=simulate, args=(p,)) for p in process_list]
     for t in threads:
         t.start()
+    print("voting")
     for t in threads:
         t.join()
